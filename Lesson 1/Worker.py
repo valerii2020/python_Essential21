@@ -14,7 +14,7 @@ worker.age = input('введите возраст рабочего  ')
 worker.day = int(worker.day)
 
 while worker.day > 7 or worker.day == 0:
-    worker.day = input('введите номер дня недели от 1 до 7 ')
+    worker.day = int(input('введите номер дня недели от 1 до 7 '))
 
 if worker.day <= 5:
     worker.Work()
