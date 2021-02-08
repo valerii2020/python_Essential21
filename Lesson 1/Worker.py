@@ -3,19 +3,26 @@ class Worker:
     age = ' '
     day = 0
     def Work(self):
-        pass
+        print('рабочий день')
     def Holliday(self):
-        pass
-    def Day(self):
-        worker.day = input('введите номер дня недели от 1 до 7 ')
-        return worker.day
+        print('выходной день')
+
 
 worker = Worker()
 worker.name = input('введите имя рабочего  ')
 worker.age = input('введите возраст рабочего  ')
 worker.day = int(worker.day)
-worker.Day()
-if worker.day >= 7 or worker.day == 0:
-    worker.Day()
+
+while worker.day > 7 or worker.day == 0:
+    worker.day = input('введите номер дня недели от 1 до 7 ')
+
+if worker.day <= 5:
+    worker.Work()
+    print('рабочий', worker.name, 'идет на работу')
 else:
-    print('non')
+    worker.Holliday()
+
+
+
+
+
